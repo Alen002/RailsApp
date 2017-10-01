@@ -14,7 +14,7 @@ body {
  /** End of Body **/
 
 /** Start of Header **/
-.navbar, {
+.navbar {
     background-color: #31302F;
     position: fixed;
     height: 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 /** Start of Media Queries **/
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   body {
     padding-top: 240px;
     text-align: center;
