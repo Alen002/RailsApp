@@ -45,6 +45,11 @@ body {
     text-align: center;
 }
 
+.link-underline {
+  text-decoration: underline;
+}
+
+
 /** Start of Media Queries **/
 @media (max-width: 800px) {
   body {
