@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <strong>Name:
+  <%= @product.name %></strong>
 </p>
 
 <p>
@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <!--<strong>Image url:</strong>
+  <%= @product.image_url %>-->
+  <%=image_tag(@product.image_url, class: "img-responsive, img-size") %>
 </p>
 
 <p>
