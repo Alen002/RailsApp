@@ -1,9 +1,11 @@
 class OrdersController <ApplicationController
 
   def index
+
   end
 
   def show
+    
   end
 
   def new
@@ -14,6 +16,6 @@ class OrdersController <ApplicationController
 
   def destroy
   end
-  
+
 
 end
