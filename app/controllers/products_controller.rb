@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all #Takes all the products from db and populates it in the array called @products
   end
 
   # GET /products/1
