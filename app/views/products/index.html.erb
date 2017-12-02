@@ -3,23 +3,11 @@
 
 <h1>Products</h1>
 
-
+<!-- This is the Products Page -->
 
 <div class="container-fluid">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-4 col-md-2"><!-- Column -->
-        <%=image_tag(product.image_url, class: "img-responsive border") %>
-        <h4><%=link_to product.name, product%></h4>
-        <%= product.description %><br>
-        <%= product.colour %> Colour <br>
-        <strong>Price: <%=number_to_currency(product.price)%></strong>
-        <tr>
-          <br>
-          <td><%= link_to 'Show', product %></td>
-      </div><!-- / End of Column -->
-    <% end %>
-  </div>
+  <%= render @products %>
+
 </div>
 
 

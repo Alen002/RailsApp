@@ -46,6 +46,21 @@ body {
   text-decoration: underline;
 }
 
+/** Start of Carousel **/
+.carousel-inner {
+  width: 380px;
+  height: 380px;
+  display: block;
+    margin: 0 auto;
+
+}
+
+.carousel-indicators li {
+  background-color: black;
+}
+
+/** End of Carousel **/
+
 
 /** Start of Media Queries **/
 @media (max-width: 800px) {
