@@ -47,19 +47,28 @@ body {
 }
 
 /** Start of Carousel **/
-.carousel-inner {
-  width: 380px;
-  height: 380px;
-  display: block;
-    margin: 0 auto;
 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-height: 600px;
+  margin: 0 auto;
+}
+
+.left.carousel-control, .right.carousel-control {
+  background: none !important; filter: none !important; progid:none !important;
 }
 
 .carousel-indicators li {
-  background-color: black;
-}
+    border-color: #B4BABC;
+    border-radius: 3;
+  }
 
+.carousel-caption {
+  font-size: 25px;
+  color: #444133;
+}
 /** End of Carousel **/
+
 
 
 /** Start of Media Queries **/
