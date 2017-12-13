@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.limit(3) #Takes all the products from db and populates it in the array called @products
+    @products = Product.all   #limit(3) #Takes all the products from db and populates it in the array called @products
   end
 
   # GET /products/1
@@ -23,12 +23,14 @@ class ProductsController < ApplicationController
 
   # POST /products
   # POST /products.json
+
+# I have redirected users not to @product but to another page
   def create
     @product = Product.new(product_params)
 
     respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+      if @product.save #was before redirect_to @product
+        format.html { redirect_to '/products#index', notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
