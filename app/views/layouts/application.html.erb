@@ -20,6 +20,14 @@
           <a class="navbar-brand" href="#">Bikers Shop</a>
         </div>
           <ul class="nav navbar-nav navbar-right">
+            
+            <div class="search-form"><!-- Search Form -->
+              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search' %>
+              <% end %>
+            </div><!-- /End of Search Form -->
+
             <li><%= link_to "HOME", root_path %></li>
             <li><%= link_to "PRODUCTS", products_path %></li>
             <li><%= link_to "ORDERS", orders_path %></li>

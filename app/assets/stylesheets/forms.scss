@@ -1,0 +1,17 @@
+.form-control {
+  width: 400px;
+}
+
+.btn-success {
+  background-color: #C5C2C1;
+  border: none;
+}
+
+/** Start of Media Queries **/
+@media (max-width: 800px) {
+  .form-control {
+    margin: 0 auto;
+    width:90%
+  }
+}
+/** End of Media Queries **/
