@@ -12,14 +12,15 @@ class StaticPagesController < ApplicationController
         to: 'Alenslo@gmx.net',
         subject: "A new contact form message from #{@name}",
         body: @message).deliver_now
-  end
-
-
-  def thank_you
-    @name = name
-    @email = email
-    @message = message
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
+
+
+  #def thank_you
+    #@name = name
+    #@email = email
+    #@message = message
+    #UserMailer.contact_form(@email, @name, @message).deliver_now
+  #end
 
 end
