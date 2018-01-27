@@ -19,9 +19,8 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Bikers Shop</a>
         </div>
-          <ul class="nav navbar-nav navbar-right">
-            
-            <div class="search-form"><!-- Search Form -->
+          <ul class="nav navbar-nav navbar-right"> <!-- Ul list -->
+            <div class="search-form"><!-- Start of Search Form -->
               <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
               <%= form.text_field :q, id: 'q', value: params[:q] %>
               <%= form.submit 'Search' %>
@@ -33,7 +32,16 @@
             <li><%= link_to "ORDERS", orders_path %></li>
             <li><%= link_to "ABOUT", static_pages_about_path %></li>
             <li><%= link_to "CONTACT", static_pages_contact_path %></li>
+
+            <li><!-- Login -->
+                <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+            </li><!-- /End of Login -->
           </ul>
+
       </div><!-- /.container-fluid -->
     </nav><!--/End of Header -->
 
