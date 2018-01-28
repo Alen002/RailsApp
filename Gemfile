@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '5.1.4'
+ruby '2.3.4'
 
 # Bundle Jquery-Rails
 gem 'jquery-rails'
