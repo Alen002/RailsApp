@@ -62,3 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Devise gem
 gem 'devise'
+
+#CanCanCan gem
+gem 'cancancan'

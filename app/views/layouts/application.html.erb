@@ -45,15 +45,19 @@
       </div><!-- /.container-fluid -->
     </nav><!--/End of Header -->
 
-
-
   <%= yield %>
-
-
 
     <div class="footer navbar-fixed-bottom">
       &copy; 2017 Bikers Shop <%= Time.now %>
     </div><!-- /End of Footers -->
+
+
+    <% if notice %><!-- Notice and Alert -->
+        <p id="notice" class="alert alert-info"><%= notice %></p> <!-- alert is a bootstrap component -->
+    <% end %>
+    <% if alert %>
+      <p id="alert" class="alert alert-warning"><%= alert %></p>
+    <% end %><!-- /End of Notice and Alert -->
 
   </body>
   </html>
