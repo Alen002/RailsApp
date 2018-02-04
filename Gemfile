@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.4'
+
 
 # Bundle Jquery-Rails
 gem 'jquery-rails'
@@ -16,6 +16,8 @@ gem 'rails', '~> 5.1.1'
 group :development, :test do
   gem 'sqlite3'
 end
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -45,7 +47,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg'               #Postgre Gem
 end
 
 group :development do
@@ -65,3 +67,6 @@ gem 'devise'
 
 #CanCanCan gem
 gem 'cancancan'
+
+#railties gem
+gem 'railties', '~> 5.1', '>= 5.1.4'
