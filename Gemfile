@@ -72,4 +72,4 @@ gem 'cancancan'
 gem 'railties', '~> 5.1', '>= 5.1.4'
 
 #activesupport
-gem 'activesupport', '~> 5.1', '>= 5.1.4'
+#gem 'activesupport', '~> 5.1', '>= 5.1.4'

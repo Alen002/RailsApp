@@ -176,7 +176,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 5.1, >= 5.1.4)
   byebug
   cancancan
   coffee-rails (~> 4.2)
