@@ -1,27 +1,43 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:
-  <%= @product.name %></strong>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong>Name:
+        <%= @product.name %></strong>
+      </p>
 
-<p>
-  <%=image_tag(@product.image_url, class: "img-responsive, img-size") %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+      <p>
+        <%=image_tag(@product.image_url, class: "img-responsive") %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= number_to_currency(@product.price) %>
-</p>
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
+
+      <p>
+        <strong>Price:</strong>
+        <%= number_to_currency(@product.price) %>
+      </p>
+
+      <p>
+        <strong>Highest Rating:</strong>
+        <%= @product.highest_rating_comment.try(:rating) %>
+      </p>
+      <p>
+        <strong>Lowest Rating:</strong>
+        <%= @product.lowest_rating_comment.try(:rating) %>
+      </p>
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+    </div>
+ </div>
+</div>
