@@ -2,15 +2,14 @@
 <html>
   <head>
     <title>Bikers Shop</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <%= csrf_meta_tags %>
-
   </head>
 
   <body>
@@ -27,37 +26,41 @@
               <% end %>
             </div><!-- /End of Search Form -->
 
-            <li><%= link_to "HOME", root_path %></li>
-            <li><%= link_to "PRODUCTS", products_path %></li>
-            <li><%= link_to "ORDERS", orders_path %></li>
-            <li><%= link_to "ABOUT", static_pages_about_path %></li>
-            <li><%= link_to "CONTACT", static_pages_contact_path %></li>
-
-            <li><!-- Login -->
-                <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-                <% else %>
-                <%= link_to('Login', new_user_session_path) %>
-                <% end %>
-            </li><!-- /End of Login -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "HOME", root_path %></li>
+              <li><%= link_to "PRODUCTS", products_path %></li>
+              <li><%= link_to "ORDERS", orders_path %></li>
+              <li><%= link_to "ABOUT", static_pages_about_path %></li>
+              <li><%= link_to "CONTACT", static_pages_contact_path %></li>
+              <li><!-- Login -->
+                  <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                  <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                  <% end %>
+              </li><!-- /End of Login -->
+            </ul>
           </ul>
-
       </div><!-- /.container-fluid -->
-    </nav><!--/End of-->
+    </nav><!--/End of Header-->
 
   <%= yield %>
+
 
     <div class="footer navbar-fixed-bottom">
       &copy; 2017 Bikers Shop <%= Time.now %>
     </div><!-- /End of Footers -->
 
+      <% if notice %><!-- Notice and Alert -->
+          <p id="notice" class="alert alert-info"><%= notice %></p> <!-- alert is a bootstrap component -->
+      <% end %>
+      <% if alert %>
+        <p id="alert" class="alert alert-warning"><%= alert %></p>
+      <% end %><!-- /End of Notice and Alert -->
 
-    <% if notice %><!-- Notice and Alert -->
-        <p id="notice" class="alert alert-info"><%= notice %></p> <!-- alert is a bootstrap component -->
-    <% end %>
-    <% if alert %>
-      <p id="alert" class="alert alert-warning"><%= alert %></p>
-    <% end %><!-- /End of Notice and Alert -->
+    <script>
+    $(".alert").fadeOut(4000);
+    </script>
 
   </body>
   </html>
