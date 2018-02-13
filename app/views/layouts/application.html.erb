@@ -13,39 +13,47 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-fixed-top"><!-- Header -->
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Bikers Shop</a>
-        </div>
-          <ul class="nav navbar-nav navbar-right"> <!-- Ul list -->
-            <div class="search-form"><!-- Start of Search Form -->
-              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-              <%= form.text_field :q, id: 'q', value: params[:q] %>
-              <%= form.submit 'Search' %>
-              <% end %>
-            </div><!-- /End of Search Form -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!-- Navbar starts here -->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <a href="#" class="navigation-header">Bikers Shop</a>
+            </div>
+          </div>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "HOME", root_path %></li>
-              <li><%= link_to "PRODUCTS", products_path %></li>
-              <li><%= link_to "ORDERS", orders_path %></li>
-              <li><%= link_to "ABOUT", static_pages_about_path %></li>
-              <li><%= link_to "CONTACT", static_pages_contact_path %></li>
-              <li><!-- Login -->
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right navigation-header">
+                <div class="search-form"><!-- Start of Search Form -->
+                  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                  <%= form.text_field :q, id: 'q', value: params[:q] %>
+                  <%= form.submit 'Search', class: "search-button" %>
+                  <% end %>
+                </div><!-- /End of Search Form -->
+                <li><%= link_to "HOME", root_path %></li>
+                <li><%= link_to "PRODUCTS", products_path %></li>
+                <li><%= link_to "ORDERS", orders_path %></li>
+                <li><%= link_to "ABOUT", static_pages_about_path %></li>
+                <li><%= link_to "CONTACT", static_pages_contact_path %></li>
+                <li><!-- Login -->
                   <% if user_signed_in? %>
                   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
                   <% else %>
                   <%= link_to('Login', new_user_session_path) %>
                   <% end %>
-              </li><!-- /End of Login -->
-            </ul>
-          </ul>
-      </div><!-- /.container-fluid -->
-    </nav><!--/End of Header-->
+                </li><!-- /End of Login -->
+              </ul>
+            </div>
+          </div>
+        </nav><!-- /End of Navbar -->
 
   <%= yield %>
-
 
     <div class="footer navbar-fixed-bottom">
       &copy; 2017 Bikers Shop <%= Time.now %>
@@ -58,9 +66,10 @@
         <p id="alert" class="alert alert-warning"><%= alert %></p>
       <% end %><!-- /End of Notice and Alert -->
 
+    <!-- Login Fadeout-->
     <script>
     $(".alert").fadeOut(4000);
-    </script>
+    </script><!-- End of Login Fadeout -->
 
   </body>
   </html>

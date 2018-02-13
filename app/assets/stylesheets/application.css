@@ -16,9 +16,41 @@
 
  .alert {
     position:fixed;
-    top: 45px;
+    top: 65px;
     left: 0px;
     width: 100%;
     z-index:9999;
     border-radius:0px
+}
+
+/**** Navigation Header ****/
+.navbar {
+  background-color: black;
+  height: 65px;
+}
+
+.navigation-header {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 25px;
+  color: black;
+  background-color: black;
+}
+
+.navigation-header:hover {
+  color: #5FB82F;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.search-button {
+  color: black;
+  background-color: grey;
+  border-color: grey;
 }
