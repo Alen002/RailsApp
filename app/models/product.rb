@@ -1,4 +1,6 @@
 class Product < ApplicationRecord #Starto of class
+  validates :name, presence: true #validation, checks whether name has been entered
+
   has_many :comments
 
   def highest_rating_comment
