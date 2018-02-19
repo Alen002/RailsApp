@@ -2,6 +2,23 @@
   border: solid 1px #D2D2D2;
 }
 
+/** Start of fade in on link **/
+.fade-in {
+  color: #111111;
+  text-decoration: none !important;
+  background-color: white;
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+}
+
+.fade-in:hover {
+   color: #64AF47;
+   background-color: white;
+}
+
+/** /End of fade in on link**/
+
 .btn-primary {
   margin-top: 50px;
   padding-top: 7px;
@@ -13,7 +30,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #6BFF66;
+  background-color: #6BFF19;
 }
 
 .container {
@@ -34,3 +51,21 @@
     max-height: 800px;
   }
 }
+
+/** Start of Image Zoom **/
+.image {
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+
+.image:hover {
+    -webkit-transform:scale(1.15); /* Safari and Chrome */
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* IE 9 */
+    -o-transform:scale(1.15); /* Opera */
+     transform:scale(1.15);
+}
+/** /End of Image Zoom **/

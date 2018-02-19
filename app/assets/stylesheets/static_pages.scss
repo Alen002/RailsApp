@@ -18,14 +18,13 @@ body {
     width: 100%;
 }
 
-.nav li a, .navbar-brand {
-  color: white;
-}
-
 .navbar-right {
   background-color: #31302F;
 }
 
+.navigation-header {
+  color: white !important;
+}
 .search-form {
   padding-top: 12px;
   display: inline-block;
