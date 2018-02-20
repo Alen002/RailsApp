@@ -69,3 +69,23 @@
      transform:scale(1.15);
 }
 /** /End of Image Zoom **/
+
+
+/** For zooming into the product **/
+.image-zoom {
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+
+.image-zoom:hover {
+    -webkit-transform:scale(1.50); /* Safari and Chrome */
+    -moz-transform:scale(1.50); /* Firefox */
+    -ms-transform:scale(1.50); /* IE 9 */
+    -o-transform:scale(1.50); /* Opera */
+     transform:scale(1.50);
+}
+
+/** /End of zooming into product **/
