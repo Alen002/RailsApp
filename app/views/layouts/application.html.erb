@@ -32,7 +32,7 @@
               <ul class="nav navbar-nav navbar-right navigation-header">
                 <div class="search-form"><!-- Start of Search Form -->
                   <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-                  <%= form.text_field :q, id: 'q', value: params[:q] %>
+                  <%= form.text_field :q, id: 'q', value: params[:q], class: "color:black" %>
                   <%= form.submit 'Search', class: "search-button" %>
                   <% end %>
                 </div><!-- /End of Search Form -->

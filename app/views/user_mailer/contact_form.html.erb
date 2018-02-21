@@ -1,10 +1,21 @@
-<table>
-  <tbody>
-    <tr>
-      <td><p>You have received a new contact form message. The contents of the message are:</p></td>
-    </tr>
-    <tr>
-      <td><p><%= @message %></p></td>
-    </tr>
-  </tbody>
-</table>
+
+    <table>
+      <tbody>
+
+        <tr>
+          <td><p>You have received a new contact form message. The contents of the message are:</p></td>
+        </tr>
+
+        <tr>
+          <td><p><%= @message %></p></td>
+        </tr>
+
+        <tr>
+          <td><p>The message was sent by <%= @name %></p></td>
+        </tr>
+
+        <tr>
+          <td><p>The email of the user is <%= @email %></p></td>
+        </tr>
+      </tbody>
+    </table>

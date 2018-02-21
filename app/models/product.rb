@@ -15,14 +15,12 @@ class Product < ApplicationRecord #Starto of class
     comments.average(:rating).to_f
   end
 
-end # End of class
-
-
-
-def self.search(search_term)
-  if Rails.env.production?
-    Product.where("name ilike ?", "%#{search_term}%")
-  else
-    Product.where("name LIKE ?", "%#{search_term}%")
+  def self.search(search_term)
+    if Rails.env.production?
+      Product.where("name ilike ?", "%#{search_term}%")
+    else
+      Product.where("name LIKE ?", "%#{search_term}%")
+    end
   end
-end
+
+end # End of class

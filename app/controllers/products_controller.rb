@@ -4,13 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-      if params[:q]
-        search_term = params[:q]
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
-      else
-        @products = Product.all
-      end
+    if params[:q]
+      @products = Product.search(params[:q])
+    else
+      @products = Product.all
     end
+      @products = @products.paginate(page: params[:page], per_page: 6)
+  end
 
   # GET /products/1
   # GET /products/1.json
