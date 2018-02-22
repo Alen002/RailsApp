@@ -1,4 +1,4 @@
-class Product < ApplicationRecord #Starto of class
+class Product < ApplicationRecord #Start of class
   validates :name, presence: true #validation, checks whether name has been entered
 
   has_many :comments
