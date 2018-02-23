@@ -76,6 +76,9 @@ gem 'devise'
 #CanCanCan gem
 gem 'cancancan'
 
+#gem for functional testing
+gem 'rails-controller-testing'
+
 #railties gem
 #gem 'railties', '~> 5.1', '>= 5.1.4'
 
