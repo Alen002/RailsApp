@@ -50,9 +50,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails', '~> 4.0'
 end
-
-
 
 group :production do
   gem 'pg'               #Postgre Gem
@@ -78,6 +77,7 @@ gem 'cancancan'
 
 #gem for functional testing
 gem 'rails-controller-testing'
+
 
 #railties gem
 #gem 'railties', '~> 5.1', '>= 5.1.4'
