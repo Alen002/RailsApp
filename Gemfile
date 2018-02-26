@@ -78,6 +78,7 @@ gem 'cancancan'
 #gem for functional testing
 gem 'rails-controller-testing'
 
+gem 'stripe'
 
 #railties gem
 #gem 'railties', '~> 5.1', '>= 5.1.4'
