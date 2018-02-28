@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :first_names
   resources :products
-  
+
   resources :products do
     resources :comments
   end
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
 
   get 'payments/create'
-  post 'payment/create'
+  post 'payments/create'
 
   root 'static_pages#landing_page'    # root 'static_pages#landing_page'
 
