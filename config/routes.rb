@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :users
   resources :first_names
   resources :products
-
+  
   resources :products do
     resources :comments
   end
   resources :users
+
 
   get 'static_pages/about'
 
@@ -15,10 +16,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-
-
   post 'static_pages/thank_you'
 
+
+  get 'payments/create'
+  post 'payment/create'
 
   root 'static_pages#landing_page'    # root 'static_pages#landing_page'
 
