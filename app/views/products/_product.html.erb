@@ -4,5 +4,7 @@
 
   <h1><%= link_to product.name, product, class: "fade-in" %></h1>
   <p><%= product.description %></p>
+    <% logger.debug "Product: #{product.name}" %>  <!-- Inserted logger debug -->
+    <% logger.debug "Product: #{product.id}" %>  <!-- Inserted logger debug -->
   <strong>$ <%= product.price %></strong>
 </div><!-- /col -->

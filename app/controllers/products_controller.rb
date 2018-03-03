@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+
     if params[:q]
       @products = Product.search(params[:q])
     else
@@ -21,6 +22,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    byebug
     @product = Product.new
   end
 
