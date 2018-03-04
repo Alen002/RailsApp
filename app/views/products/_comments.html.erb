@@ -1,5 +1,13 @@
 <div class="product-reviews">
     <% @comments.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+</div>
+
+
+
+<!--<div class="product-reviews">
+    <% @comments.each do |comment| %>
         <div class="row">
             <hr>
             <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
@@ -15,4 +23,4 @@
         </div>
     <% end %>
 
-</div>
+</div>-->
