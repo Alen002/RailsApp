@@ -6,7 +6,9 @@
 
 <div class="container">
   <h1>Products</h1>
-  <%= render @products, class: 'img-responsive' %>
+  <% cache(cache_key_for_products) do %> <!-- Start of Cache -->
+    <%= render @products, class: 'img-responsive' %>
+  <% end %><!-- /End of Cache -->
 </div>
 
   <%= will_paginate @products %><br>

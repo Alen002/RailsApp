@@ -1,10 +1,11 @@
 <div class="col-sm-2 col-md-4">
+  <% cache product do %><!-- Start of Cache -->
+    <%=link_to image_tag(product.image_url, class: "image img-responsive"), product %>
 
-  <%=link_to image_tag(product.image_url, class: "image img-responsive"), product %>
-
-  <h1><%= link_to product.name, product, class: "fade-in" %></h1>
-  <p><%= product.description %></p>
-    <% logger.debug "Product: #{product.name}" %>  <!-- Inserted logger debug -->
-    <% logger.debug "Product: #{product.id}" %>  <!-- Inserted logger debug -->
-  <strong>$ <%= product.price %></strong>
+    <h1><%= link_to product.name, product, class: "fade-in" %></h1>
+    <p><%= product.description %></p>
+      <% logger.debug "Product: #{product.name}" %>  <!-- Inserted logger debug -->
+      <% logger.debug "Product: #{product.id}" %>  <!-- Inserted logger debug -->
+    <strong>$ <%= product.price %></strong>
+  <% end %><!-- /End of Cache -->
 </div><!-- /col -->
