@@ -84,6 +84,8 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
+gem 'redis-rails'
+
 #railties gem
 #gem 'railties', '~> 5.1', '>= 5.1.4'
 
