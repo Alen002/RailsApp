@@ -99,5 +99,14 @@ config.cache_store = :dalli_store,
                      :socket_failure_delay => 0.2,
                      :down_retry_delay => 60
                     }
-  
+
+
+                    config.web_socket_server_url = "wss://alensbikershop.herokuapp.com/cable"
+                    config.action_cable.allowed_request_origins = ['https://alensbikershop.herokuapp.com', 'http://alensbikershop.herokuapp.com']
+
+
+
+
+
+
 end
