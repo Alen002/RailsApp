@@ -1,4 +1,4 @@
-ar refreshRating = function() {
+var refreshRating = function() {
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -16,7 +16,7 @@ ar refreshRating = function() {
   });
 };
 
-$(document).on('turbolinks:load ajaxSuccess', function() {   
+$(document).on('turbolinks:load ajaxSuccess', function() {
     refreshRating();
 
     $('.img-zoom').elevateZoom();
