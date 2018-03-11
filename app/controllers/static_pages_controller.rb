@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
         #subject: "A new contact form message from #{@name}",
         #body: @message).deliver_now
     UserMailer.contact_form(@email, @name, @message).deliver_now
-    UserMailer.welcome_form(@email).deliver_now
+    #UserMailer.welcome_form(@email).deliver_now
   end
 
 end

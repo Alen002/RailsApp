@@ -14,7 +14,9 @@
 
       <p>
         <%=image_tag(@product.image_url, data_zoom_image: @product.image_url, class: " img_zoom img-responsive") %>
-
+        <script>
+          $('.img_zoom').elevateZoom();
+        </script>
       </p>
 
       <p>
