@@ -19,6 +19,9 @@ class PaymentsController < ApplicationController
           user_id: @user.id,
           total: @product.price
         )
+        flash[:notice] = 'Payment has been received'
+
+        UserMailer.order_placed(@product, @user)
       end
 
     rescue Stripe::CardError => e

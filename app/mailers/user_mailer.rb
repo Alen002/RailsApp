@@ -12,4 +12,9 @@ class UserMailer < ApplicationMailer
     mail(to: user.email, subject: "Thank you for the registering on Alens Biker Shop")
   end
 
+  def order_placed(product, user)
+    @user = user
+    mail(to: user.email, subject: "Thank you for ordering our product")
+  end
+
 end
