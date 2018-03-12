@@ -11,7 +11,7 @@ describe ProductsController, type: :controller  do  #Start of Products Controlle
       expect(response).to be_ok
       expect(response).to render_template("index")
     end
-  end # End of index
+  end #/End of index
 
 
   #delete
@@ -41,7 +41,7 @@ describe ProductsController, type: :controller  do  #Start of Products Controlle
         @product.reload
         expect(@product.colour).to eq "red"
       end
-    end # /End of update
+    end #/End of update
 
 
 
@@ -51,7 +51,7 @@ describe ProductsController, type: :controller  do  #Start of Products Controlle
           @user = FactoryBot.build(:user)
           sign_in @user
         end
-        it "successfully creates new product" do  
+        it "successfully creates new product" do
           @product = FactoryBot.create(:product)
           expect(response).to be_successful
         end
